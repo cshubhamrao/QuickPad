@@ -132,7 +132,8 @@
             // 
             // openFile_dialog
             // 
-            this.openFile_dialog.Filter = "QuickPad Text Files|*.qtf|Plain Text Files|*.txt";
+            this.openFile_dialog.Filter = "QuickPad Text Files|*.qtf|Batch File|*.bat, *.cmd|HTML File|*.htm,*.html|Plain Te" +
+    "xt Files|*.txt|All Files|*.*";
             this.openFile_dialog.Title = "Open QuickPad file";
             // 
             // QuickPad_UI

@@ -14,7 +14,14 @@ namespace QuickPad
             StreamWriter writer = new StreamWriter(fileName);
             writer.Write(data);
             writer.Close();
+        }
 
+        public string displayData(OpenFileDialog dialog)
+        {
+            string data="";
+            StreamReader reader = new StreamReader(dialog.FileName);
+            data=reader.ReadToEnd();
+            return data;
         }
 
         public QuickPad_UI()
@@ -43,6 +50,7 @@ namespace QuickPad
         private void fileOpen_button_Click(object sender, EventArgs e)
         {
             openFile_dialog.ShowDialog();
+            textBox.Text = displayData(openFile_dialog);
         }
 
     }
