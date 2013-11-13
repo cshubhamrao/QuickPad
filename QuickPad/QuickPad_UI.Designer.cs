@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.textBox = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.fileSave_button = new System.Windows.Forms.Button();
             this.fileName_Txt = new System.Windows.Forms.TextBox();
             this.fileName_label = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
             this.ext_label = new System.Windows.Forms.Label();
             this.ext_comboBox = new System.Windows.Forms.ComboBox();
             this.saveFile_dialog = new System.Windows.Forms.SaveFileDialog();
+            this.fileOpen_button = new System.Windows.Forms.Button();
+            this.openFile_dialog = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // textBox
@@ -52,16 +54,16 @@
             this.textBox.TabIndex = 0;
             this.textBox.Text = "";
             // 
-            // button1
+            // fileSave_button
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(285, 291);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.fileSave_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.fileSave_button.Location = new System.Drawing.Point(285, 291);
+            this.fileSave_button.Name = "fileSave_button";
+            this.fileSave_button.Size = new System.Drawing.Size(75, 23);
+            this.fileSave_button.TabIndex = 1;
+            this.fileSave_button.Text = "Save";
+            this.fileSave_button.UseVisualStyleBackColor = true;
+            this.fileSave_button.Click += new System.EventHandler(this.button1_Click);
             // 
             // fileName_Txt
             // 
@@ -118,17 +120,33 @@
             // 
             this.saveFile_dialog.Title = "Save QuickPad file";
             // 
+            // fileOpen_button
+            // 
+            this.fileOpen_button.Location = new System.Drawing.Point(204, 291);
+            this.fileOpen_button.Name = "fileOpen_button";
+            this.fileOpen_button.Size = new System.Drawing.Size(75, 23);
+            this.fileOpen_button.TabIndex = 7;
+            this.fileOpen_button.Text = "Open";
+            this.fileOpen_button.UseVisualStyleBackColor = true;
+            this.fileOpen_button.Click += new System.EventHandler(this.fileOpen_button_Click);
+            // 
+            // openFile_dialog
+            // 
+            this.openFile_dialog.Filter = "QuickPad Text Files|*.qtf|Plain Text Files|*.txt";
+            this.openFile_dialog.Title = "Open QuickPad file";
+            // 
             // QuickPad_UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(372, 326);
+            this.Controls.Add(this.fileOpen_button);
             this.Controls.Add(this.ext_comboBox);
             this.Controls.Add(this.ext_label);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.fileName_label);
             this.Controls.Add(this.fileName_Txt);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.fileSave_button);
             this.Controls.Add(this.textBox);
             this.Name = "QuickPad_UI";
             this.Text = "QuickPad";
@@ -141,13 +159,15 @@
         #endregion
 
         private System.Windows.Forms.RichTextBox textBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button fileSave_button;
         private System.Windows.Forms.TextBox fileName_Txt;
         private System.Windows.Forms.Label fileName_label;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Label ext_label;
         private System.Windows.Forms.ComboBox ext_comboBox;
         private System.Windows.Forms.SaveFileDialog saveFile_dialog;
+        private System.Windows.Forms.Button fileOpen_button;
+        private System.Windows.Forms.OpenFileDialog openFile_dialog;
     }
 }
 

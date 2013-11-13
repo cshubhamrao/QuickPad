@@ -40,5 +40,10 @@ namespace QuickPad
             writeData(saveFile_dialog, ext_comboBox.Text);
         }
 
+        private void fileOpen_button_Click(object sender, EventArgs e)
+        {
+            openFile_dialog.ShowDialog();
+        }
+
     }
 }
