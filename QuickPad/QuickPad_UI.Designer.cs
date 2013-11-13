@@ -122,6 +122,7 @@
             // 
             // fileOpen_button
             // 
+            this.fileOpen_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.fileOpen_button.Location = new System.Drawing.Point(204, 291);
             this.fileOpen_button.Name = "fileOpen_button";
             this.fileOpen_button.Size = new System.Drawing.Size(75, 23);
