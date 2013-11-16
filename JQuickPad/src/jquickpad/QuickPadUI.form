@@ -10,7 +10,6 @@
     </Component>
     <Component class="javax.swing.JFileChooser" name="fileOpen">
       <Properties>
-        <Property name="dialogType" type="int" value="1"/>
         <Property name="approveButtonToolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>

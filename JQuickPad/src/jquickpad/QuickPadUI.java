@@ -12,7 +12,7 @@ import javax.swing.UIManager;
  * @author Shubham
  */
 public class QuickPadUI extends javax.swing.JFrame {
-public static void writeData(javax.swing.JFileChooser fileChooser, 
+public static void saveFile(javax.swing.JFileChooser fileChooser, 
                                javax.swing.JTextPane editor)
 {
     try (FileWriter writer = new FileWriter(fileChooser.getSelectedFile()))
@@ -54,7 +54,6 @@ public static void writeData(javax.swing.JFileChooser fileChooser,
         fileSave.setDialogType(javax.swing.JFileChooser.SAVE_DIALOG);
         fileSave.setApproveButtonToolTipText("");
 
-        fileOpen.setDialogType(javax.swing.JFileChooser.SAVE_DIALOG);
         fileOpen.setApproveButtonToolTipText("");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -116,7 +115,7 @@ public static void writeData(javax.swing.JFileChooser fileChooser,
     private void save_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_save_ButtonActionPerformed
         // TODO add your handling code here:
         fileSave.showDialog(this, null);
-        writeData(fileSave,textBox);
+        saveFile(fileSave,textBox);
         
         /* Uncoment this line to test whether FileChooser returns the path of 
         correct file */
