@@ -43,27 +43,19 @@ public static void writeData(javax.swing.JFileChooser fileChooser,
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        fileChooser = new javax.swing.JFileChooser();
+        fileSave = new javax.swing.JFileChooser();
+        fileOpen = new javax.swing.JFileChooser();
         textBox_ScrollPanel = new javax.swing.JScrollPane();
         textBox = new javax.swing.JTextPane();
         save_Button = new javax.swing.JButton();
         open_Button = new javax.swing.JButton();
         exit_Button = new javax.swing.JButton();
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        fileSave.setDialogType(javax.swing.JFileChooser.SAVE_DIALOG);
+        fileSave.setApproveButtonToolTipText("");
 
-        fileChooser.setDialogType(javax.swing.JFileChooser.SAVE_DIALOG);
-        fileChooser.setApproveButtonToolTipText("");
+        fileOpen.setDialogType(javax.swing.JFileChooser.SAVE_DIALOG);
+        fileOpen.setApproveButtonToolTipText("");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("QuickPad");
@@ -123,8 +115,8 @@ public static void writeData(javax.swing.JFileChooser fileChooser,
 
     private void save_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_save_ButtonActionPerformed
         // TODO add your handling code here:
-        fileChooser.showDialog(this, null);
-        writeData(fileChooser,textBox);
+        fileSave.showDialog(this, null);
+        writeData(fileSave,textBox);
         
         /* Uncoment this line to test whether FileChooser returns the path of 
         correct file */
@@ -163,8 +155,8 @@ public static void writeData(javax.swing.JFileChooser fileChooser,
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton exit_Button;
-    private javax.swing.JFileChooser fileChooser;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JFileChooser fileOpen;
+    private javax.swing.JFileChooser fileSave;
     private javax.swing.JButton open_Button;
     private javax.swing.JButton save_Button;
     private javax.swing.JTextPane textBox;
